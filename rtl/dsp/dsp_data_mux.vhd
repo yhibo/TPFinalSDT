@@ -16,6 +16,10 @@
 --
 ----------------------------------------------------------------------------------
 
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
 entity dsp_data_mux is
   port (
     sel                  : in std_logic_vector(2 downto 0);
@@ -26,7 +30,7 @@ entity dsp_data_mux is
     s_dds_tdata_in       : in std_logic_vector(15 downto 0);
     s_dds_tvalid_in      : in std_logic;
     m_axis_tdata_out     : out std_logic_vector(31 downto 0);
-    m_axis_tvalid_out    : out std_logic;
+    m_axis_tvalid_out    : out std_logic
   );
 end entity dsp_data_mux;
 
