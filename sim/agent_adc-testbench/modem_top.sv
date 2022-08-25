@@ -11,6 +11,7 @@ module modem_top;
   // Clock and reset signals.
   logic clk;
   logic rst_n;
+  logic aux_rst_n;
   logic cpo;  //señal a conectar al DUT en cpo
   logic fco;  //señal a conectar al DUT en fco
   logic pd;  //señal a conectar al DUT en pd
@@ -18,7 +19,7 @@ module modem_top;
   stream_if #(
       .DATA_WIDTH(3)
   ) stream_if_inst (
-      .rst_n(rst_n),
+      .rst_n(aux_rst_n),
       .clk  (clk)
   );
   assign stream_if_inst.ready = 1'b1;
@@ -29,7 +30,16 @@ module modem_top;
     pd  <= stream_if_inst.data[0];
   end
 
-
+  //DUT
+  adc_receiver_syn_top adc_receiver_syn_top_inst (
+      .ext_resetn(rst_n),
+      .adc_data_p_in(pd),
+      .adc_data_n_in(~pd),
+      .adc_dco_p_in(cpo),
+      .adc_dco_n_in(~cpo),
+      .adc_fco_p_in(fco),
+      .adc_fco_n_in(~fco)
+  );
 
   // dut DUT (
   //     .clk_i(clk),
@@ -43,14 +53,22 @@ module modem_top;
   //     .sc_o(xcvr_inst.data[7:0])
   // );
 
-
   // Clock and reset initial block.
   // Clock and reset initial block.
   initial begin
     // Initialize clock to 0 and reset_n to TRUE.
     clk   = 0;
     rst_n = 0;
+    aux_rst_n = 0;
+    #(CLK_PERIOD/2) clk <= ~clk;
     // Wait for reset completion (RESET_CLOCK_COUNT).
+    repeat (RESET_CLOCK_COUNT) begin
+      #(CLK_PERIOD / 2) clk = 0;
+      #(CLK_PERIOD - CLK_PERIOD / 2) clk = 1;
+    end
+
+    aux_rst_n = 1;
+
     repeat (RESET_CLOCK_COUNT) begin
       #(CLK_PERIOD / 2) clk = 0;
       #(CLK_PERIOD - CLK_PERIOD / 2) clk = 1;

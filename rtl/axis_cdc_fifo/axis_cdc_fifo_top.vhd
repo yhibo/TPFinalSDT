@@ -11,7 +11,7 @@
 --
 -- Dependencies: None.
 --
--- Revision: 2022-05-22
+-- Revision: 2022-06-19
 -- Additional Comments:
 --
 ----------------------------------------------------------------------------------
@@ -56,13 +56,12 @@ architecture rtl of axis_cdc_fifo_top is
   signal axis_tready_inter_fifos : std_logic;
   signal axis_tdata_inter_fifos : std_logic_vector(63 downto 0);
   signal axis_tlast_inter_fifos : std_logic;
-  signal re_axis_tready : std_logic;
-  signal im_axis_tready : std_logic;
+  signal axis_tready : std_logic;
 begin
 
-  s_re_axis_tready <= re_axis_tready;
-  s_im_axis_tready <= im_axis_tready;
-  fifo_full_out <= not(re_axis_tready and im_axis_tready);
+  s_re_axis_tready <= axis_tready;
+  s_im_axis_tready <= axis_tready;
+  fifo_full_out <= not(axis_tready);
   axis_tdata <= s_im_axis_tdata & s_re_axis_tdata;
   axis_tvalid <= s_re_axis_tvalid and s_im_axis_tvalid and fifo_enable_in;
 
@@ -74,9 +73,9 @@ begin
       s_aclk         => s_aclk,
       s_aresetn      => s_aresetn,
       s_axis_tvalid  => axis_tvalid,
-      s_axis_tready  => s_re_axis_tready,
+      s_axis_tready  => axis_tready,
       s_axis_tdata   => axis_tdata,
-      s_axis_tlast   => s_re_axis_tlast,
+      s_axis_tlast   => '0',
       m_axis_tvalid  => axis_tvalid_inter_fifos,
       m_axis_tready  => axis_tready_inter_fifos,
       m_axis_tdata   => axis_tdata_inter_fifos,

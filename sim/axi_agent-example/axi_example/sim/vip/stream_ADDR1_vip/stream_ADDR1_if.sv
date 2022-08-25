@@ -31,6 +31,10 @@
 
 //  Interface: stream_if
 //
+  import uvm_pkg::*;
+  `include "uvm_macros.svh"
+
+  import stream_ADDR1_agent_pkg::*;
 
 interface stream_ADDR1_if (
     input logic rst_n,
@@ -43,10 +47,6 @@ interface stream_ADDR1_if (
 
   // synthesis translate_off
 
-  import uvm_pkg::*;
-  `include "uvm_macros.svh"
-
-  import stream_ADDR1_agent_pkg::*;
 
   class stream_ADDR1_concrete_class extends stream_ADDR1_abstract_class;
     `uvm_component_param_utils(stream_ADDR1_concrete_class);

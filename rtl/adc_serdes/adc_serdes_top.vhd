@@ -11,7 +11,7 @@
 --
 -- Dependencies: None.
 --
--- Revision: 2022-05-22
+-- Revision: 2022-06-19
 -- Additional Comments:
 --
 ----------------------------------------------------------------------------------
@@ -68,7 +68,11 @@ architecture arch of adc_serdes_top is
 
   signal tdata_reg : std_logic_vector(15 downto 0);
   signal tvalid_reg : std_logic;
+  
+  signal sys_rst: std_logic;
 begin
+
+  sys_rst <= sys_rst_n_in;
 
   BUFGCE_DIV_inst : BUFGCE_DIV
   generic map(
@@ -93,7 +97,7 @@ begin
     RDY    => rdy_from_idelayctrl_s,
     --input ports
     REFCLK => adc_dco_clk_in,
-    RST    => not sys_rst_n_in
+    RST    => sys_rst
   );
   adc_serdes_inst : entity adc_serdes.adc_serdes(rtl)
     generic map(

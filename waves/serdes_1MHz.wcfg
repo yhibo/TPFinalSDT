@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="adc_serdes_pkg" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="std" />
+            <top_module name="stream_ADDR1_agent_pkg" />
+            <top_module name="stream_ADDR2_agent_pkg" />
+            <top_module name="stream_agent_pkg" />
+            <top_module name="stream_slave_agent_pkg" />
+            <top_module name="tb_defn_pkg" />
+            <top_module name="tb_env_pkg" />
+            <top_module name="tb_test_pkg" />
+            <top_module name="tb_top" />
+            <top_module name="tb_vseq_pkg" />
+            <top_module name="uvm_pkg" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="84994534fs"></ZoomEndTime>
+      <Cursor1Time time="21105169fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="207"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="logic" fp_name="/tb_top/adc_clk">
+      <obj_property name="ElementShortName">adc_clk</obj_property>
+      <obj_property name="ObjectShortName">adc_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/axi_clk">
+      <obj_property name="ElementShortName">axi_clk</obj_property>
+      <obj_property name="ObjectShortName">axi_clk</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group72">
+      <obj_property name="label">ADC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_top/rst_n">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/cpo">
+         <obj_property name="ElementShortName">cpo</obj_property>
+         <obj_property name="ObjectShortName">cpo</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/fco">
+         <obj_property name="ElementShortName">fco</obj_property>
+         <obj_property name="ObjectShortName">fco</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/pd">
+         <obj_property name="ElementShortName">pd</obj_property>
+         <obj_property name="ObjectShortName">pd</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group73">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_re/select_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">select_in[1:0]</obj_property>
+         <obj_property name="ObjectShortName">select_in[1:0]</obj_property>
+         <obj_property name="label">select_fir[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_data_source_mux_0/control_in">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">control_in[1:0]</obj_property>
+         <obj_property name="ObjectShortName">control_in[1:0]</obj_property>
+         <obj_property name="label">select_data_source[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/registros_posta_v1_0_0/fifo_enable_out">
+         <obj_property name="ElementShortName">fifo_enable_out</obj_property>
+         <obj_property name="ObjectShortName">fifo_enable_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/rresp_if/data">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">data[33:0]</obj_property>
+         <obj_property name="ObjectShortName">data[33:0]</obj_property>
+         <obj_property name="label">read_data[33:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group74">
+      <obj_property name="label">Data Source</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_data_source_mux_0/U0/s_axis_adc_tdata">
+         <obj_property name="ElementShortName">s_axis_adc_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_adc_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_data_source_mux_0/U0/s_axis_dds_compiler_tdata">
+         <obj_property name="ElementShortName">s_axis_dds_compiler_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_dds_compiler_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_data_source_mux_0/U0/s_axis_counter_tdata">
+         <obj_property name="ElementShortName">s_axis_counter_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_counter_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_data_source_mux_0/m_axis_tdata">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">m_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[15:0]</obj_property>
+         <obj_property name="label">data_source_mux_tdata[15:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
+         <obj_property name="AnalogYRangeMin">-7668</obj_property>
+         <obj_property name="AnalogYRRangeMax">11155</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_data_source_mux_0/m_axis_tvalid">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         <obj_property name="label">data_source_mux_tvalid</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group144">
+      <obj_property name="label">Multiplier output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/cos_quarter_freq_mult/m_axis_tdata">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">m_axis_tdata[16:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[16:0]</obj_property>
+         <obj_property name="label">cos_mult_tdata[16:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0,000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0,000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0,000000</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/sin_quarter_frec_mult/m_axis_tdata">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">m_axis_tdata[16:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[16:0]</obj_property>
+         <obj_property name="label">sin_mult_tdata[16:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0,000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0,000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0,000000</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group147">
+      <obj_property name="label">FIR im mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_im/select_in">
+         <obj_property name="ElementShortName">select_in[1:0]</obj_property>
+         <obj_property name="ObjectShortName">select_in[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_im/fir_1_data_in">
+         <obj_property name="ElementShortName">fir_1_data_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fir_1_data_in[31:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_im/s_axis_no_fir_tdata_in">
+         <obj_property name="ElementShortName">s_axis_no_fir_tdata_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_no_fir_tdata_in[31:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_im/fir_2_data_in">
+         <obj_property name="ElementShortName">fir_2_data_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fir_2_data_in[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_im/m_axis_tdata_out">
+         <obj_property name="ElementShortName">m_axis_tdata_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata_out[31:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_im/m_axis_tvalid_out">
+         <obj_property name="ElementShortName">m_axis_tvalid_out</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid_out</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group154">
+      <obj_property name="label">FIR re mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_re/select_in">
+         <obj_property name="ElementShortName">select_in[1:0]</obj_property>
+         <obj_property name="ObjectShortName">select_in[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_re/fir_1_data_in">
+         <obj_property name="ElementShortName">fir_1_data_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fir_1_data_in[31:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_re/s_axis_no_fir_tdata_in">
+         <obj_property name="ElementShortName">s_axis_no_fir_tdata_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_no_fir_tdata_in[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_re/fir_2_data_in">
+         <obj_property name="ElementShortName">fir_2_data_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fir_2_data_in[31:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_re/m_axis_tdata_out">
+         <obj_property name="ElementShortName">m_axis_tdata_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata_out[31:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/dsp_filter_mux_re/m_axis_tvalid_out">
+         <obj_property name="ElementShortName">m_axis_tvalid_out</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid_out</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/m_axis_re_tdata">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">m_axis_re_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_re_tdata[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeMin">-42352300.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">148133000.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="label">real_tdata[31:0]</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/adc_receiver_bd_wrapper_inst/adc_receiver_bd_i/dsp_hier/m_axis_im_tdata">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">m_axis_im_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_im_tdata[31:0]</obj_property>
+      <obj_property name="label">im_tdata[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0,000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0,000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0,000000</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

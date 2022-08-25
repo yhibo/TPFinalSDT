@@ -11,7 +11,7 @@
 --
 -- Dependencies: None.
 --
--- Revision: 2022-05-23
+-- Revision: 2022-06-21
 -- Additional Comments:
 --
 ----------------------------------------------------------------------------------
@@ -372,7 +372,6 @@ begin
       else
         loc_addr := to_integer(unsigned(axi_araddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB)));
         axis_tready_from_axi_reg <= '0';
-        im_axis_tdata_reg <= s_axis_tdata(63 downto 32);
         -- When there is a valid read address (S_AXI_ARVALID) with
         -- acceptance of read address by the slave (axi_arready),
         -- output the read dada
@@ -396,6 +395,7 @@ begin
               -- accept a new data only when it's available from the AXI-S master
               if (s_axis_tvalid = '1') then
                 axis_tready_from_axi_reg <= '1';
+                im_axis_tdata_reg <= s_axis_tdata(63 downto 32);
                 axi_rdata <= s_axis_tdata(31 downto 0);
               else
                 axi_rdata <= READ_ERROR;

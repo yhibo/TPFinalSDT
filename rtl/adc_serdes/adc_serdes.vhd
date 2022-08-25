@@ -111,8 +111,8 @@ begin
     IS_C_INVERTED  => '0'                    -- Optional inversion for C
   )
   port map(
-    Q1 => data_to_des_FE(0), -- 1-bit output: Registered parallel output 1
-    Q2 => data_to_des_RE(0), -- 1-bit output: Registered parallel output 2
+    Q1 => data_to_des_RE(0), -- 1-bit output: Registered parallel output 1
+    Q2 => data_to_des_FE(0), -- 1-bit output: Registered parallel output 2
     C  => adc_dco_clk_in,    -- 1-bit input: High-speed clock
     CB => adc_dco_clk_in,    -- 1-bit input: Inversion of High-speed clock C
     D  => data_to_iddr,      -- 1-bit input: Serial Data Input
@@ -166,8 +166,8 @@ begin
     IS_C_INVERTED  => '0'                    -- Optional inversion for C
   )
   port map(
-    Q1 => frame_to_des_FE(0), -- 1-bit output: Registered parallel output 1
-    Q2 => frame_to_des_RE(0), -- 1-bit output: Registered parallel output 2
+    Q1 => frame_to_des_RE(0), -- 1-bit output: Registered parallel output 1
+    Q2 => frame_to_des_FE(0), -- 1-bit output: Registered parallel output 2
     C  => adc_dco_clk_in,     -- 1-bit input: High-speed clock
     CB => adc_dco_clk_in,     -- 1-bit input: Inversion of High-speed clock C
     D  => frame_to_iddr,      -- 1-bit input: Serial Data Input
