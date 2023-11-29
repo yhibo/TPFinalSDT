@@ -14,9 +14,7 @@ This project is about the implementation of the Digital Signal Processing (DSP) 
 
 ## Introduction
 
-The digital samples from the ADC are delivered in serial format with a 455 MHz clock. These samples go through a SERDES block and are then converted to an AXI4-Stream format. The DSP stage begins at this point, and the design of this stage, along with the rest of the system, is shown in Figure 1.
-
-![Figure 1: System Design](figure1.png)
+The digital samples from the ADC are delivered in serial format with a 455 MHz clock. These samples go through a SERDES block and are then converted to an AXI4-Stream format. The DSP stage begins at this point.
 
 ## Implemented Architecture Design
 
